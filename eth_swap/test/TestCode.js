@@ -55,7 +55,7 @@ describe("buytokens", async () => {
     expect(await gtt.balanceOf(ethswap.address)).to.equal(ethers.utils.parseEther('9900'));
     let provider = new ethers.getDefaultProvider('http://127.0.0.1:8545/');
     let balance = await provider.getBalance(ethswap.address);
-    expect(ethers.utils.formatEther(balance).toString).to.equal('1.0');
+    expect(ethers.utils.formatEther(balance)).to.equal('1.0');
   })
 })
 
